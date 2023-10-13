@@ -1,5 +1,5 @@
 import React from 'react'
-import ToDoList from './toDoList'
+import ToDoList from './components/toDoList'
 import GlobalStyle from './style/globalStyle'
 
 function App() {
