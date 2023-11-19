@@ -11,7 +11,7 @@
     	"plugin:import/warnings", // eslint-plugin-import 설치한 경우
         "plugin:react/recommended",
         "plugin:prettier/recommended"
-    ],
+	],
     "overrides": [
     ],
 	"parser": "@typescript-eslint/parser",
@@ -34,26 +34,25 @@
 		],
 		"import/no-extraneous-dependencies": 0,
 		"import/extensions": [
-			2,
+			"error",
 			"ignorePackages",
 			{
 				"js": "never",
 				"jsx": "never",
 				"ts": "never",
-				"tsx": "never"
+				"tsx": "never",
+				"json": "never"
 			}
 		]
 	},
-    "settings": {
-		"import/parser": {
-			"@typescript-eslint/parser": [".ts", ".tsx"]
+	"settings": {
+		"import/parsers": {
+		  "@typescript-eslint/parser": [".ts", ".tsx"]
 		},
 		"import/resolver": {
 			"node": {
-				"extensions": [".js", ".jsx", ".ts", ".tsx"],
-				"moduleDirectory": ["node_modules", "@types"]
-			},
-			"typescript": {}
-		}
-	}
+			  "extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		  }
+	 }
 }
